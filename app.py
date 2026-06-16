@@ -48,8 +48,7 @@ def recommend(name, cosine_similarities=cosine_similarities):
 
         if fuzzy_match and fuzzy_match[1] >= MIN_FUZZY_SCORE:
             matched_name = fuzzy_match[0]
-            st.write(f"Using fuzzy matched restaurant: '{matched_name}' (Score: {fuzzy_match[1]})
-")
+            st.write(f"Using fuzzy matched restaurant: '{matched_name}' (Score: {fuzzy_match[1]})")
             idx = indices.loc[matched_name]
         else:
             st.write(f"Restaurant '{name}' not found and no close fuzzy match (score < {MIN_FUZZY_SCORE}) in the dataset.")
